@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.steins.dao.LogDaoInterface">
+    <insert id="addLog">
+        INSERT into systemLog(requestIp,createDate,description,createBy) value (#{requestIp},#{createDate},#{description},#{createBy})
+    </insert>
+
+    <select id="getLogCount" resultType="int">
+      select count(*) from systemLog
+    </select>
+
+    <select id="getAllLogs" resultType="com.steins.entity.SystemLog">
+      select * from systemLog limit #{startIndex},#{pageSize}
+    </select>
+</mapper>

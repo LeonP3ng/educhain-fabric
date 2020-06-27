@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间应该是对应接口的包名+接口名 -->
+<mapper namespace="com.steins.dao.InstitutionDao">
+    <insert id="regist" parameterType="com.steins.entity.User">
+        INSERT INTO users (username,password,rating,id_number) VALUES (#{username},#{password},#{rating},#{idNumber})
+    </insert>
+    <select id="login" resultType="com.steins.entity.User">
+        SELECT * FROM users WHERE username=#{username}
+    </select>
+    <insert id="addExam" parameterType="com.steins.entity.Exam" >
+        INSERT INTO info_exam (record_time,recorder_id,student_id,subject,grade,exam_name,score,remark) VALUES (#{recordTime},#{recorderId},#{studentId},#{subject},#{grade},#{examName},#{score},#{remark})
+    </insert>
+    <insert id="addInternship" parameterType="com.steins.entity.Internship">
+        INSERT INTO info_internship (record_time,recorder_id,student_id,period,company_name,remark,position) VALUES (#{recordTime},#{recorderId},#{studentId},#{period},#{companyName},#{remark},#{position})
+    </insert>
+    <insert id="addCompetition" parameterType="com.steins.entity.Competition">
+        INSERT INTO info_competition (record_time,recorder_id,student_id,competition_name,competition_degree,achievement,remark) VALUES (#{recordTime},#{recorderId},#{studentId},#{competitionName},#{competitionDegree},#{achievement},#{remark})
+    </insert>
+    <update id="updExam">
+        UPDATE info_exam SET score = #{uptdate} WHERE exam_name=#{examName} AND student_id =#{studentId} AND grade = #{grade} AND subject = #{subject}
+    </update>
+    <update id="updCompetition">
+        UPDATE info_competition SET achievement =#{uptdate} WHERE competition_name =#{competitionName} AND student_id=#{studentId}
+    </update>
+    <update id="updInternship">
+        UPDATE info_internship SET period = #{uptdate} WHERE company_name=#{companyName} AND period=#{period} AND student_id=#{studentId}
+    </update>
+
+    <insert id="addInfoHeader">
+        INSERT INTO info_header (insert_time,update_time,block_height,id_number,contract_address,data_protect,data_check,dir_title) VALUES (#{insertTime},#{updateTime},#{blockHeight},#{idNumber},#{contractAddress},#{dataProtect},#{dataCheck},#{dirTitle})
+    </insert>
+
+
+
+</mapper>

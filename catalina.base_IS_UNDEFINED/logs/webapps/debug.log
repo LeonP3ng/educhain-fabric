@@ -1,0 +1,13 @@
+2019-05-28 07:18:28.990 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addInfoHeader] use [master] Strategy, SqlCommanType [INSERT]..
+2019-05-28 07:18:29.070 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2019-05-28 07:18:30.156 [main] DEBUG com.steins.dao.InstitutionDao.addInfoHeader - ==>  Preparing: INSERT INTO info_header (record_time,update_time,block_height,id_number,contract_address,data_protect,data_check,dir_title) VALUES (?,?,?,?,?,?,?,?) 
+2019-05-28 07:19:21.902 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addInfoHeader] use [master] Strategy, SqlCommanType [INSERT]..
+2019-05-28 07:19:21.939 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2019-05-28 07:19:22.944 [main] DEBUG com.steins.dao.InstitutionDao.addInfoHeader - ==>  Preparing: INSERT INTO info_header (insert_time,update_time,block_height,id_number,contract_address,data_protect,data_check,dir_title) VALUES (?,?,?,?,?,?,?,?) 
+2019-05-28 07:19:23.002 [main] DEBUG com.steins.dao.InstitutionDao.addInfoHeader - ==> Parameters: asx(String), aas(String), 21(Integer), 11111(String), 0xxasas(String), 0(Integer), 1(Integer), test(String)
+2019-05-28 07:19:23.067 [main] DEBUG com.steins.dao.InstitutionDao.addInfoHeader - <==    Updates: 1
+2019-05-28 07:20:52.153 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getInfoHeaderByIdNumber] use [slave] Strategy, SqlCommanType [SELECT]..
+2019-05-28 07:20:52.190 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2019-05-28 07:20:53.094 [main] DEBUG c.s.dao.UserDaoInterface.getInfoHeaderByIdNumber - ==>  Preparing: select * from info_header where id_number = ? 
+2019-05-28 07:20:53.132 [main] DEBUG c.s.dao.UserDaoInterface.getInfoHeaderByIdNumber - ==> Parameters: 2(String)
+2019-05-28 07:20:53.204 [main] DEBUG c.s.dao.UserDaoInterface.getInfoHeaderByIdNumber - <==      Total: 1
