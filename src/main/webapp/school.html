@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<link rel="icon" href="./images/logo.png"/>
+	<title>教育信息管理系统</title>	
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/info.css">
+	<link rel="stylesheet" type="text/css" href="css/school.css">
+	<link rel="stylesheet" type="text/css" href="css/referInfo.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="header">
+			<div class="logo">
+				<img src="images/logo.png">
+			</div>
+			<div class="user_info">
+				<div class="user">
+					<div class="img"><img src="images/log.png"></div>
+					
+					<input type="text" name="user" class="username" disabled="disabled">
+				</div>
+				<div class="opt" id="out">退出登录</div>
+			</div>
+		</div>
+		<div class="page-container">
+			<div class="page-title">
+				<div class="title">
+					<span>教育信息管理系统</span>
+				</div>
+			</div>
+
+			<div class="page-content">
+				<div class="bg-aside">
+					<div class="aside">
+						<div class="img">
+							<img src="images/shezhi.png">
+						</div>
+						<div class="nav">
+							<ul class="nav-list">
+								<li class="nav-item" id="reg_stu"><a href="javascript:;" class="nav-link">注册学生信息</a></li>
+								<li class="nav-item" id="add_stu"><a href="javascript:;" class="nav-link">增加学生信息</a></li>
+								<li class="nav-item" id="re_stu"><a href="javascript:;" class="nav-link">修改学生信息</a></li>
+								<li class="nav-item" id="refer_stu"><a href="javascript:;" class="nav-link">查询学生信息</a></li>
+								<li class="nav-item" id="stus"><a href="javascript:;" class="nav-link">全部学生信息</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div class="bg-cont">
+					<div class="main-content">
+						<div class="exam reg" id="reg">
+							<form class="contForm" id="examForm">
+								<table id="myTable0">
+									<thead class="t-head">
+		  								<tr>
+		    								<td class="t-item">学生身份证号</td>
+		    								<td class="t-item">操作</td>
+		  								</tr>
+									</thead>
+								</table>
+							</form>
+							<input type="button" value="提交" class="btn" id="sbtExam0">
+							<input type="button" value="添加" class="btn" onclick="exam0()">
+						</div>
+						<div class="exam add"  style="display: none;">
+							<form class="contForm" id="examForm">
+								<table id="myTable1">
+									<thead class="t-head">
+		  								<tr>
+		    								<td class="t-item">学生ID</td>
+		    								<td class="t-item">科目</td>
+		    								<td class="t-item">年级</td>
+		    								<td class="t-item">考试名称</td>
+		    								<td class="t-item">分数</td>
+		    								<td class="t-item">备注</td>
+		    								<td class="t-item">操作</td>
+		  								</tr>
+									</thead>
+								</table>
+							</form>
+							<input type="button" value="提交" class="btn" id="sbtExam1">
+							<input type="button" value="添加" class="btn" onclick="exam1();">
+						</div>
+
+						<div class="exam rectify"  style="display: none;">
+							<form class="contForm" id="examForm">
+								<table id="myTable2">
+									<thead class="t-head">
+		  								<tr>
+		    								<!-- <td class="t-item">记录时间</td> -->
+		    								<td class="t-item">成绩修改为</td>
+		    								<td class="t-item">学生ID</td>
+		    								<td class="t-item">科目</td>
+		    								<td class="t-item">年级</td>
+		    								<td class="t-item">考试名称</td>
+		    								<td class="t-item">备注</td>
+		    								<td class="t-item">操作</td>
+		  								</tr>
+									</thead>
+								</table>
+							</form>
+							<input type="button" value="提交" class="btn" id="sbtExam2">
+							<input type="button" value="添加" class="btn" onclick="exam2();">
+						</div>
+
+						<div class="refer" style="display: none;"  id="mainContent">
+							<div class="referBox">
+								<label for="name">身份证号：</label>
+								<input type="text" name="idNumber" id="idNumber" class="ipt">
+							</div>
+							<div class="referBox">
+								<input class="btn" id="chaxun_btn" onclick="information()" value="立即查询" style="text-align: center;"></input>
+							</div>
+						</div>
+						<div class="res" id="res"> 
+							<div  id="search">
+								<div class="resTitle">
+									<span>信息状态：</span>
+								</div>
+								<div class="resCont" id="status">
+									
+								</div>
+								<div class="resTitle">
+									<span>不一致基本信息：</span>
+								</div>
+								<div class="resCont">
+									
+								</div>
+								<div class="resTitle">
+									<span>不一致文件信息：</span>
+								</div>
+								<div class="resCont">
+									
+								</div>
+								<div class="chaxun">
+									<button class="btn" onclick="score(1)" id="btn1">查询成绩信息</button>
+									<!-- <button class="btn" id="btn2" onclick="competition(1)">查询竞赛信息</button>
+									<button class="btn" id="btn3" onclick="practice(1)">查询实习信息</button> -->
+								</div>
+								<input type="button" name="back" value="返回" class="back-btn" id="bc_btn"/>
+						</div>
+
+					<div class="contentWidget" id="contentWidget1">
+		            	<div class="contentTable" id="contentTable">
+		            		<table class="contest_list" id="contest_list">
+		            		</table>
+		            		<input type="button" name="back" value="返回" class="back-btn" id="back_btn" style="display: none;" />
+						<div class="pageManager" id="pageManager">
+			                  <div class="pageCount"></div>
+			                  <ul class="pageShow">
+			                  </ul>
+		       			</div>
+		       		</div>
+					</div>
+					
+				</div>
+				    <div class="stus" style="display: none;">
+						<div class="contentWidget" id="contentWidget">
+			            	<div class="contentTable" id="contentTable">
+			            		<table class="contest_list" id="contest_list">
+			            		</table>
+			            		<input type="button" name="back" value="返回" class="back-btn" id="back_btn" style="display: none;" />
+								<div class="pageManager" id="pageManager">
+					                  <div class="pageCount"></div>
+					                  <ul class="pageShow1">
+					                  </ul>
+				       			</div>
+		       				</div>
+						</div>
+					</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/school.js"></script>
+	<script type="text/javascript" src="js/stu_all.js"></script>
+</body>
+</html>

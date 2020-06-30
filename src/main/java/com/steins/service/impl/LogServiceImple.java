@@ -14,25 +14,27 @@ import java.util.List;
 
 @Service
 public class LogServiceImple implements LogServiceInterface {
-
     @Resource
     LogDaoInterface logDaoInterface;
 
-
-    @Override
-    @Transactional
-    public int addLog(SystemLog systemLog) {
-        return logDaoInterface.addLog(systemLog);
+    public LogServiceImple() {
     }
 
-    @Anno(operationType = "selectALL操作",operationName = "分页展示所有记录")
+    @Transactional
+    public int addLog(SystemLog systemLog) {
+        return this.logDaoInterface.addLog(systemLog);
+    }
+
+    @Anno(
+            operationType = "selectALL操作",
+            operationName = "分页展示所有记录"
+    )
     public Page<SystemLog> getAllLogs(int pageNum, int pageSize) {
-        int count=logDaoInterface.getLogCount();
-        Page page=new Page(pageNum,pageSize,count);
+        int count = this.logDaoInterface.getLogCount();
+        Page page = new Page(pageNum, pageSize, count);
         int startIndex = pageNum * pageSize - pageSize;
-        List list=logDaoInterface.getAllLogs(startIndex,pageSize);
+        List list = this.logDaoInterface.getAllLogs(startIndex, pageSize);
         page.setList(list);
         return page;
     }
-
 }

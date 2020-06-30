@@ -7,11 +7,6 @@
         SELECT * from users where username = #{username} and password = #{password}
     </select>
 
-    <select id="getStudentInfo" resultType="com.steins.entity.User">
-        SELECT * from users where id_number = #{idNumber}
-    </select>
-
-
     <update id="updateUser">
         update users
         <set>
@@ -24,6 +19,10 @@
         </set>
         where id_number = #{idNumber}
     </update>
+
+    <select id="getStudentInfo" resultType="com.steins.entity.User">
+        SELECT * from users where id_number = #{idNumber}
+    </select>
 
     <select id="getCompetitionCount" resultType="Integer">
         select count(*) from info_competition where student_id = #{idNumber}
@@ -53,22 +52,7 @@
         select * from info_header where id_number = #{idNumber}
     </select>
 
-    <insert id="insertStudentOfInstitution">
-        INSERT INTO info_student_institution (student_idNumber,institution_idNumber) VALUES (#{studentIdNumber},#{institutionIdNumber})
-    </insert>
-
-    <select id="getStudentsOfInstitution" resultType="com.steins.entity.User">
-        select * from users where id_number in (
-              select student_idNumber from info_student_institution where institution_idNumber = #{idNumber})
-              limit #{pageNum},#{pageSize}
-    </select>
-
-    <select id="getStudentsOfInstitutionCount" resultType="Integer">
-        select count(*) from users where id_number in (
-              select student_idNumber from info_student_institution where institution_idNumber = #{idNumber})
-    </select>
-
-    <select id="getInfoHeadById" resultType="com.steins.entity.InfoHeader">
-        select * from info_header where id_number = #{idNumber}
-    </select>
+<!--    <select id="getInfoHeadById" resultType="com.steins.entity.InfoHeader">-->
+<!--        select * from info_header where id_number = #{idNumber}-->
+<!--    </select>-->
 </mapper>

@@ -20,6 +20,15 @@
     <spring.version>4.3.7.RELEASE</spring.version>
 
   </properties>
+
+
+  <repositories>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
+  </repositories>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -243,6 +252,13 @@
       <version>2.3</version>
       <classifier>jdk15</classifier>
     </dependency>
+
+
+      <dependency>
+        <groupId>com.github.ipfs</groupId>
+        <artifactId>java-ipfs-api</artifactId>
+        <version>v1.2.2</version>
+      </dependency>
 
 
 

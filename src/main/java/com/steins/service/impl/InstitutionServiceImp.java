@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.annotation.Resource;
 import javax.servlet.annotation.WebServlet;
 import java.util.Date;
+import java.util.List;
 
 @Service
 @WebServlet(name = "InstitutionServiceImp")
@@ -19,85 +20,90 @@ public class InstitutionServiceImp implements InstitutionService {
     @Resource
     InstitutionDao institutionDao;
 
-    @Anno(operationName = "注册", operationType = "insert操作")
-    public int regist(User user){
-        return institutionDao.regist(user);
+    public InstitutionServiceImp() {
     }
 
-    public boolean login(String username,String password){
-        boolean flag = false;
-        User user = institutionDao.login(username);
-        if(password.equals(user.getPassword())&&user.getRating()!=3)
-            flag=true;
-        return flag;
+    @Anno(
+            operationName = "注册",
+            operationType = "insert操作"
+    )
+    public int regist(User user) {
+        return this.institutionDao.regist(user);
     }
 
-    @Anno(operationName = "增加考试信息", operationType = "insert操作")
-    public int addExam(Exam exam){
-         int i =institutionDao.addExam(exam);
-        String data = Account.str2HexStr(exam.toString());
-        String txHash =  Account.sendTransaction(data);
-        InfoHeader infoHeader = new InfoHeader();
-        Date date = new Date();
-        infoHeader.setInsertTime(date.toString());
-        infoHeader.setContractAddress(txHash);
-        infoHeader.setIdNumber(exam.getStudentId());
-        institutionDao.addInfoHeader(infoHeader);
-        return i;
+    public String checkRegist(String idNumber) {
+        return this.institutionDao.checkRegist(idNumber);
     }
 
-    @Anno(operationName = "增加实习经历", operationType = "insert操作")
-    public int addInternship(Internship internship){
-        int i= institutionDao.addInternship(internship);
-
-        String data = Account.str2HexStr(internship.toString());
-        String txHash =  Account.sendTransaction(data);
-        InfoHeader infoHeader = new InfoHeader();
-        Date date = new Date();
-        infoHeader.setInsertTime(date.toString());
-        infoHeader.setContractAddress(txHash);
-        infoHeader.setIdNumber(internship.getStudentId());
-        institutionDao.addInfoHeader(infoHeader);
-        return i;
-    }
-
-    @Anno(operationName = "增加竞赛信息", operationType = "insert操作")
-    public int addCompetition(Competition competition){
-        int i= institutionDao.addCompetition(competition);
-
-        String data = Account.str2HexStr(competition.toString());
-        String txHash =  Account.sendTransaction(data);
-        InfoHeader infoHeader = new InfoHeader();
-        Date date = new Date();
-        infoHeader.setInsertTime(date.toString());
-        infoHeader.setContractAddress(txHash);
-        infoHeader.setIdNumber(competition.getStudentId());
-        institutionDao.addInfoHeader(infoHeader);
-        return i;
-    }
-
-    @Anno(operationName = "更新考试信息", operationType = "update操作")
-    public int updExam(String uptdate,String examName,String studentId,String grade,String subject){
-        return institutionDao.updExam(uptdate,examName,studentId,grade,subject);
-    }
-
-    @Anno(operationName = "更新实习信息", operationType = "update操作")
-    public int updInternship(String uptdate,String companyName,String period,String studentId){
-        return institutionDao.updInternship(uptdate,companyName,period,studentId);
-    }
-
-
-    @Anno(operationName = "更新竞赛信息", operationType = "update操作")
-    public int updCompetition(String uptdate,String competitionName,String studentId){
-        return institutionDao.updCompetition(uptdate,competitionName,studentId);
-    }
-
-
-    @Override
+    @Anno(
+            operationName = "增加考试信息",
+            operationType = "insert操作"
+    )
     @Transactional
-    public int addInfoHeader(InfoHeader infoHeader) {
-        return institutionDao.addInfoHeader(infoHeader);
+    public int addExam(Exam exam) {
+        return this.institutionDao.addExam(exam);
     }
 
+    @Anno(
+            operationName = "增加实习经历",
+            operationType = "insert操作"
+    )
+    @Transactional
+    public int addInternship(Internship internship) {
+        return this.institutionDao.addInternship(internship);
+    }
 
+    @Anno(
+            operationName = "增加竞赛信息",
+            operationType = "insert操作"
+    )
+    @Transactional
+    public int addCompetition(Competition competition) {
+        return this.institutionDao.addCompetition(competition);
+    }
+
+    @Anno(
+            operationName = "更新考试信息",
+            operationType = "update操作"
+    )
+    @Transactional
+    public int updExam(String uptdate, String examName, String studentId, String grade, String subject) {
+        return this.institutionDao.updExam(uptdate, examName, studentId, grade, subject);
+    }
+
+    @Anno(
+            operationName = "更新实习信息",
+            operationType = "update操作"
+    )
+    @Transactional
+    public int updInternship(String uptdate, String companyName, String period, String studentId) {
+        return this.institutionDao.updInternship(uptdate, companyName, period, studentId);
+    }
+
+    @Anno(
+            operationName = "更新竞赛信息",
+            operationType = "update操作"
+    )
+    @Transactional
+    public int updCompetition(String uptdate, String competitionName, String studentId) {
+        return this.institutionDao.updCompetition(uptdate, competitionName, studentId);
+    }
+
+    public Page getStudentsOfInstitution(String idNumber, int pageNum, int pageSize) {
+        int studentsOfInstitutionCount = this.institutionDao.getStudentsOfInstitutionCount(idNumber);
+        Page page = new Page(pageNum, pageSize, studentsOfInstitutionCount);
+        pageNum = pageNum * pageSize - pageSize;
+        List<User> studentsOfInstitution = this.institutionDao.getStudentsOfInstitution(idNumber, pageNum, pageSize);
+        page.setList(studentsOfInstitution);
+        return page;
+    }
+
+    @Transactional
+    @Anno(
+            operationName = "插入学生和组织的映射",
+            operationType = "insert操作"
+    )
+    public int insertStudentOfInstitution(String studentIdNumber, String institutionIdNumber) {
+        return this.institutionDao.insertStudentOfInstitution(studentIdNumber, institutionIdNumber);
+    }
 }

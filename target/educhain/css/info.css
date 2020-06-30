@@ -1,0 +1,66 @@
+
+.page-content .main-content .addItem{
+	width: 100%;
+	height: auto;
+	padding-top: 100px;
+	padding-left: 110px
+}
+.page-content .main-content .addItem .btn{
+	border: none;
+    border-radius: 10px;
+	font-family: "黑体";
+    font-size: 18px;
+    width: 150px;
+    height: 45px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(68, 93, 83);
+	margin-left: 50px;
+}
+.page-content .main-content .exam,.page-content .main-content .competition,.page-content .main-content .internship{
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+.page-content .main-content .exam table,.page-content .main-content .competition table,.page-content .main-content .internship table{
+	width: 100%;
+	border:0;
+	text-align: center;
+	border-collapse: collapse;
+}
+.page-content .main-content .exam table thead,.page-content .main-content .competition table thead,.page-content .main-content .internship table thead{
+	background-color: rgb(68, 93, 83);
+	font-size: 22px;
+}
+.page-content .main-content .exam table td,.page-content .main-content .competition table td,.page-content .main-content .internship table td{
+	width: 89px;
+	height: 40px;
+}
+td .addtd{
+	width: 120px;
+	height: 30px;
+	border: 0;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background-color: rgb(139, 208, 183);
+}
+td .opt-lk{
+	display: inline-block;
+	font-size: 12px;
+	cursor: pointer;
+	color: blue;
+	margin: 10px 4px;
+}
+.exam .btn,.competition .btn,.internship .btn{
+	float: right;
+	border: none;
+  	border-radius: 10px;
+	font-family: "黑体";
+  	font-size: 15px;
+  	width: 100px;
+  	height: 25px;
+  	color: rgb(255, 255, 255);
+    background-color: rgb(68, 93, 83);
+	margin-left: 50px;
+	margin-top: 20px;
+ 
+} 

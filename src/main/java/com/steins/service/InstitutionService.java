@@ -5,19 +5,26 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.annotation.WebServlet;
 
-@Service
-@WebServlet(name = "InstitutionService")
+
 public interface InstitutionService {
-    public int regist(User user);
-    public boolean login(String username, String password);
-    public int addExam(Exam exam);
-    public int addInternship(Internship internship);
-    public int addCompetition(Competition competition);
-    public int updExam(String uptdate, String test, String studentId, String grade, String subject);
-    public int updInternship(String uptdate, String company, String period, String studentId);
-    public int updCompetition(String uptdate, String competition, String studentId);
+    int regist(User var1);
 
+    String checkRegist(String var1);
 
-    int addInfoHeader(InfoHeader infoHeader);
+    int addExam(Exam var1);
+
+    int addInternship(Internship var1);
+
+    int addCompetition(Competition var1);
+
+    int updExam(String var1, String var2, String var3, String var4, String var5);
+
+    int updInternship(String var1, String var2, String var3, String var4);
+
+    int updCompetition(String var1, String var2, String var3);
+
+    Page getStudentsOfInstitution(String var1, int var2, int var3);
+
+    int insertStudentOfInstitution(String var1, String var2);
 
 }

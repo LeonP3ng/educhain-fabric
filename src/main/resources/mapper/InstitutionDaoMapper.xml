@@ -5,9 +5,11 @@
     <insert id="regist" parameterType="com.steins.entity.User">
         INSERT INTO users (username,password,rating,id_number) VALUES (#{username},#{password},#{rating},#{idNumber})
     </insert>
-    <select id="login" resultType="com.steins.entity.User">
-        SELECT * FROM users WHERE username=#{username}
-    </select>
+<!--    <select id="login" resultType="com.steins.entity.User">-->
+<!--        SELECT * FROM users WHERE username=#{username}-->
+<!--    </select>-->
+
+
     <insert id="addExam" parameterType="com.steins.entity.Exam" >
         INSERT INTO info_exam (record_time,recorder_id,student_id,subject,grade,exam_name,score,remark) VALUES (#{recordTime},#{recorderId},#{studentId},#{subject},#{grade},#{examName},#{score},#{remark})
     </insert>
@@ -31,6 +33,19 @@
         INSERT INTO info_header (insert_time,update_time,block_height,id_number,contract_address,data_protect,data_check,dir_title) VALUES (#{insertTime},#{updateTime},#{blockHeight},#{idNumber},#{contractAddress},#{dataProtect},#{dataCheck},#{dirTitle})
     </insert>
 
+    <insert id="insertStudentOfInstitution">
+        INSERT INTO info_student_institution (student_idNumber,institution_idNumber) VALUES (#{studentIdNumber},#{institutionIdNumber})
+    </insert>
 
+    <select id="getStudentsOfInstitution" resultType="com.steins.entity.User">
+        select * from users where id_number in (
+              select student_idNumber from info_student_institution where institution_idNumber = #{idNumber})
+              limit #{pageNum},#{pageSize}
+    </select>
+
+    <select id="getStudentsOfInstitutionCount" resultType="Integer">
+        select count(*) from users where id_number in (
+              select student_idNumber from info_student_institution where institution_idNumber = #{idNumber})
+    </select>
 
 </mapper>
