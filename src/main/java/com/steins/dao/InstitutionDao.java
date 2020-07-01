@@ -14,7 +14,7 @@ public interface InstitutionDao {
     int regist(User var1);
 
     //少了
-    String checkRegist(@Param("idNumber") String var1);
+   // String checkRegist(@Param("idNumber") String var1);
 
     int addExam(Exam var1);
 

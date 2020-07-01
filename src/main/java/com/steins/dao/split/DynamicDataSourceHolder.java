@@ -9,13 +9,13 @@ public class DynamicDataSourceHolder {
 	public static final String DB_MASTER = "master";
 	public static final String DB_SLAVE = "slave";
 
-	public static String getDbType() {
-		String db = contextHolder.get();
-		if (db == null) {
-			db = DB_MASTER;
-		}
-		return db;
-	}
+//	public static String getDbType() {
+//		String db = contextHolder.get();
+//		if (db == null) {
+//			db = DB_MASTER;
+//		}
+//		return db;
+//	}
 
 	/**
 	 * 设置线程的dbType
@@ -30,8 +30,8 @@ public class DynamicDataSourceHolder {
 	/**
 	 * 清理连接类型
 	 */
-	public static void clearDBType() {
-		contextHolder.remove();
-	}
+//	public static void clearDBType() {
+//		contextHolder.remove();
+//	}
 
 }

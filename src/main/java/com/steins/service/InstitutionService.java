@@ -9,7 +9,7 @@ import javax.servlet.annotation.WebServlet;
 public interface InstitutionService {
     int regist(User var1);
 
-    String checkRegist(String var1);
+    //String checkRegist(String var1);
 
     int addExam(Exam var1);
 

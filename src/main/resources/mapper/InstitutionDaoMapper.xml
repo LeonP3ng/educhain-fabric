@@ -29,9 +29,9 @@
         UPDATE info_internship SET period = #{uptdate} WHERE company_name=#{companyName} AND period=#{period} AND student_id=#{studentId}
     </update>
 
-    <insert id="addInfoHeader">
-        INSERT INTO info_header (insert_time,update_time,block_height,id_number,contract_address,data_protect,data_check,dir_title) VALUES (#{insertTime},#{updateTime},#{blockHeight},#{idNumber},#{contractAddress},#{dataProtect},#{dataCheck},#{dirTitle})
-    </insert>
+<!--    <insert id="addInfoHeader">-->
+<!--        INSERT INTO info_header (insert_time,update_time,block_height,id_number,contract_address,data_protect,data_check,dir_title) VALUES (#{insertTime},#{updateTime},#{blockHeight},#{idNumber},#{contractAddress},#{dataProtect},#{dataCheck},#{dirTitle})-->
+<!--    </insert>-->
 
     <insert id="insertStudentOfInstitution">
         INSERT INTO info_student_institution (student_idNumber,institution_idNumber) VALUES (#{studentIdNumber},#{institutionIdNumber})

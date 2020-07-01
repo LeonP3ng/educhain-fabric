@@ -1,13 +1,540 @@
-2019-05-28 07:18:28.990 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addInfoHeader] use [master] Strategy, SqlCommanType [INSERT]..
-2019-05-28 07:18:29.070 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2019-05-28 07:18:30.156 [main] DEBUG com.steins.dao.InstitutionDao.addInfoHeader - ==>  Preparing: INSERT INTO info_header (record_time,update_time,block_height,id_number,contract_address,data_protect,data_check,dir_title) VALUES (?,?,?,?,?,?,?,?) 
-2019-05-28 07:19:21.902 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addInfoHeader] use [master] Strategy, SqlCommanType [INSERT]..
-2019-05-28 07:19:21.939 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
-2019-05-28 07:19:22.944 [main] DEBUG com.steins.dao.InstitutionDao.addInfoHeader - ==>  Preparing: INSERT INTO info_header (insert_time,update_time,block_height,id_number,contract_address,data_protect,data_check,dir_title) VALUES (?,?,?,?,?,?,?,?) 
-2019-05-28 07:19:23.002 [main] DEBUG com.steins.dao.InstitutionDao.addInfoHeader - ==> Parameters: asx(String), aas(String), 21(Integer), 11111(String), 0xxasas(String), 0(Integer), 1(Integer), test(String)
-2019-05-28 07:19:23.067 [main] DEBUG com.steins.dao.InstitutionDao.addInfoHeader - <==    Updates: 1
-2019-05-28 07:20:52.153 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getInfoHeaderByIdNumber] use [slave] Strategy, SqlCommanType [SELECT]..
-2019-05-28 07:20:52.190 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
-2019-05-28 07:20:53.094 [main] DEBUG c.s.dao.UserDaoInterface.getInfoHeaderByIdNumber - ==>  Preparing: select * from info_header where id_number = ? 
-2019-05-28 07:20:53.132 [main] DEBUG c.s.dao.UserDaoInterface.getInfoHeaderByIdNumber - ==> Parameters: 2(String)
-2019-05-28 07:20:53.204 [main] DEBUG c.s.dao.UserDaoInterface.getInfoHeaderByIdNumber - <==      Total: 1
+2020-07-01 15:16:03.765 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.loginUser] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 15:16:03.833 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 15:16:05.459 [main] DEBUG com.steins.dao.UserDaoInterface.loginUser - ==>  Preparing: SELECT * from users where username = ? and password = ? 
+2020-07-01 15:16:05.539 [main] DEBUG com.steins.dao.UserDaoInterface.loginUser - ==> Parameters: admin(String), admin123(String)
+2020-07-01 15:16:05.609 [main] DEBUG com.steins.dao.UserDaoInterface.loginUser - <==      Total: 1
+2020-07-01 15:16:59.148 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getInfoHeaderByIdNumber] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 15:16:59.204 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 15:17:01.165 [main] DEBUG c.s.dao.UserDaoInterface.getInfoHeaderByIdNumber - ==>  Preparing: select * from info_header where id_number = ? 
+2020-07-01 15:17:01.251 [main] DEBUG c.s.dao.UserDaoInterface.getInfoHeaderByIdNumber - ==> Parameters: 2(String)
+2020-07-01 15:17:01.382 [main] DEBUG c.s.dao.UserDaoInterface.getInfoHeaderByIdNumber - <==      Total: 0
+2020-07-01 15:26:00.386 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.loginUser] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 15:26:00.409 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 15:26:01.594 [main] DEBUG com.steins.dao.UserDaoInterface.loginUser - ==>  Preparing: SELECT * from users where username = ? and password = ? 
+2020-07-01 15:26:01.634 [main] DEBUG com.steins.dao.UserDaoInterface.loginUser - ==> Parameters: lp(String), 123456(String)
+2020-07-01 15:26:01.703 [main] DEBUG com.steins.dao.UserDaoInterface.loginUser - <==      Total: 1
+2020-07-01 15:27:38.371 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getCompetitionCount] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 15:27:38.428 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 15:27:39.964 [main] DEBUG c.steins.dao.UserDaoInterface.getCompetitionCount - ==>  Preparing: select count(*) from info_competition where student_id = ? 
+2020-07-01 15:27:40.015 [main] DEBUG c.steins.dao.UserDaoInterface.getCompetitionCount - ==> Parameters: 2017013053(String)
+2020-07-01 15:27:40.112 [main] DEBUG c.steins.dao.UserDaoInterface.getCompetitionCount - <==      Total: 1
+2020-07-01 15:27:40.179 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.loginUser] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 15:27:40.180 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 15:27:40.183 [main] DEBUG com.steins.dao.UserDaoInterface.loginUser - ==>  Preparing: SELECT * from users where username = ? and password = ? 
+2020-07-01 15:27:40.186 [main] DEBUG com.steins.dao.UserDaoInterface.loginUser - ==> Parameters: lp(String), 123456(String)
+2020-07-01 15:27:40.237 [main] DEBUG com.steins.dao.UserDaoInterface.loginUser - <==      Total: 1
+2020-07-01 15:27:40.249 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.updateUser] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 15:27:40.250 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 15:27:40.318 [main] DEBUG com.steins.dao.UserDaoInterface.updateUser - ==>  Preparing: update users SET username = ?, password = ?, rating = ?, sex = ? where id_number = ? 
+2020-07-01 15:27:40.327 [main] DEBUG com.steins.dao.UserDaoInterface.updateUser - ==> Parameters: 20200701(String), 123(String), 1(Integer), 0(Integer), 20200701(String)
+2020-07-01 15:27:40.425 [main] DEBUG com.steins.dao.UserDaoInterface.updateUser - <==    Updates: 0
+2020-07-01 15:27:40.435 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getExamCount] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 15:27:40.435 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 15:27:40.439 [main] DEBUG com.steins.dao.UserDaoInterface.getExamCount - ==>  Preparing: select count(*) from info_exam where student_id = ? 
+2020-07-01 15:27:40.441 [main] DEBUG com.steins.dao.UserDaoInterface.getExamCount - ==> Parameters: 2017013053(String)
+2020-07-01 15:27:40.497 [main] DEBUG com.steins.dao.UserDaoInterface.getExamCount - <==      Total: 1
+2020-07-01 15:27:40.504 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getStudentInternship] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 15:27:40.505 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 15:27:40.505 [main] DEBUG c.steins.dao.UserDaoInterface.getStudentInternship - ==>  Preparing: select * from info_internship where student_id = ? limit ?,? 
+2020-07-01 15:27:40.516 [main] DEBUG c.steins.dao.UserDaoInterface.getStudentInternship - ==> Parameters: 2017013053(String), 1(Integer), 5(Integer)
+2020-07-01 15:27:40.600 [main] DEBUG c.steins.dao.UserDaoInterface.getStudentInternship - <==      Total: 5
+2020-07-01 15:27:40.605 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getInfoHeaderByIdNumber] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 15:27:40.605 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 15:27:40.608 [main] DEBUG c.s.dao.UserDaoInterface.getInfoHeaderByIdNumber - ==>  Preparing: select * from info_header where id_number = ? 
+2020-07-01 15:27:40.611 [main] DEBUG c.s.dao.UserDaoInterface.getInfoHeaderByIdNumber - ==> Parameters: 2017013053(String)
+2020-07-01 15:27:40.662 [main] DEBUG c.s.dao.UserDaoInterface.getInfoHeaderByIdNumber - <==      Total: 1
+2020-07-01 15:27:40.670 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getStudentCompetition] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 15:27:40.671 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 15:27:40.692 [main] DEBUG c.s.dao.UserDaoInterface.getStudentCompetition - ==>  Preparing: select * from info_competition where student_id = ? limit ?,? 
+2020-07-01 15:27:40.693 [main] DEBUG c.s.dao.UserDaoInterface.getStudentCompetition - ==> Parameters: 2017013053(String), 1(Integer), 5(Integer)
+2020-07-01 15:27:40.795 [main] DEBUG c.s.dao.UserDaoInterface.getStudentCompetition - <==      Total: 0
+2020-07-01 15:27:40.801 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getStudentExam] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 15:27:40.801 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 15:27:40.802 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentExam - ==>  Preparing: select * from info_exam where student_id = ? limit ?,? 
+2020-07-01 15:27:40.804 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentExam - ==> Parameters: 2017013053(String), 1(Integer), 5(Integer)
+2020-07-01 15:27:40.859 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentExam - <==      Total: 5
+2020-07-01 15:27:40.866 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getStudentInfo] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 15:27:40.867 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 15:27:40.868 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentInfo - ==>  Preparing: SELECT * from users where id_number = ? 
+2020-07-01 15:27:40.868 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentInfo - ==> Parameters: 20200701(String)
+2020-07-01 15:27:40.917 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentInfo - <==      Total: 0
+2020-07-01 15:27:40.922 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getInternshipCount] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 15:27:40.922 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 15:27:40.925 [main] DEBUG com.steins.dao.UserDaoInterface.getInternshipCount - ==>  Preparing: select count(*) from info_internship where student_id = ? 
+2020-07-01 15:27:40.926 [main] DEBUG com.steins.dao.UserDaoInterface.getInternshipCount - ==> Parameters: 2017013053(String)
+2020-07-01 15:27:40.982 [main] DEBUG com.steins.dao.UserDaoInterface.getInternshipCount - <==      Total: 1
+2020-07-01 15:37:24.763 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getCompetitionCount] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 15:37:24.809 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 15:37:26.168 [main] DEBUG c.steins.dao.UserDaoInterface.getCompetitionCount - ==>  Preparing: select count(*) from info_competition where student_id = ? 
+2020-07-01 15:37:26.217 [main] DEBUG c.steins.dao.UserDaoInterface.getCompetitionCount - ==> Parameters: 2017013053(String)
+2020-07-01 15:37:26.305 [main] DEBUG c.steins.dao.UserDaoInterface.getCompetitionCount - <==      Total: 1
+2020-07-01 15:37:26.372 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.loginUser] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 15:37:26.372 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 15:37:26.374 [main] DEBUG com.steins.dao.UserDaoInterface.loginUser - ==>  Preparing: SELECT * from users where username = ? and password = ? 
+2020-07-01 15:37:26.376 [main] DEBUG com.steins.dao.UserDaoInterface.loginUser - ==> Parameters: lp(String), 123456(String)
+2020-07-01 15:37:26.443 [main] DEBUG com.steins.dao.UserDaoInterface.loginUser - <==      Total: 1
+2020-07-01 15:37:26.447 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.updateUser] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 15:37:26.448 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 15:37:26.503 [main] DEBUG com.steins.dao.UserDaoInterface.updateUser - ==>  Preparing: update users SET username = ?, password = ?, rating = ?, sex = ? where id_number = ? 
+2020-07-01 15:37:26.504 [main] DEBUG com.steins.dao.UserDaoInterface.updateUser - ==> Parameters: 20200701(String), 123(String), 1(Integer), 0(Integer), 20200701(String)
+2020-07-01 15:37:26.601 [main] DEBUG com.steins.dao.UserDaoInterface.updateUser - <==    Updates: 0
+2020-07-01 15:37:26.605 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getExamCount] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 15:37:26.605 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 15:37:26.606 [main] DEBUG com.steins.dao.UserDaoInterface.getExamCount - ==>  Preparing: select count(*) from info_exam where student_id = ? 
+2020-07-01 15:37:26.608 [main] DEBUG com.steins.dao.UserDaoInterface.getExamCount - ==> Parameters: 2017013053(String)
+2020-07-01 15:37:26.660 [main] DEBUG com.steins.dao.UserDaoInterface.getExamCount - <==      Total: 1
+2020-07-01 15:37:26.665 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getStudentInternship] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 15:37:26.666 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 15:37:26.667 [main] DEBUG c.steins.dao.UserDaoInterface.getStudentInternship - ==>  Preparing: select * from info_internship where student_id = ? limit ?,? 
+2020-07-01 15:37:26.668 [main] DEBUG c.steins.dao.UserDaoInterface.getStudentInternship - ==> Parameters: 2017013053(String), 1(Integer), 5(Integer)
+2020-07-01 15:37:26.720 [main] DEBUG c.steins.dao.UserDaoInterface.getStudentInternship - <==      Total: 5
+2020-07-01 15:37:26.726 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getInfoHeaderByIdNumber] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 15:37:26.727 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 15:37:26.728 [main] DEBUG c.s.dao.UserDaoInterface.getInfoHeaderByIdNumber - ==>  Preparing: select * from info_header where id_number = ? 
+2020-07-01 15:37:26.729 [main] DEBUG c.s.dao.UserDaoInterface.getInfoHeaderByIdNumber - ==> Parameters: 2017013053(String)
+2020-07-01 15:37:26.777 [main] DEBUG c.s.dao.UserDaoInterface.getInfoHeaderByIdNumber - <==      Total: 1
+2020-07-01 15:37:26.782 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getStudentCompetition] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 15:37:26.782 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 15:37:26.900 [main] DEBUG c.s.dao.UserDaoInterface.getStudentCompetition - ==>  Preparing: select * from info_competition where student_id = ? limit ?,? 
+2020-07-01 15:37:26.902 [main] DEBUG c.s.dao.UserDaoInterface.getStudentCompetition - ==> Parameters: 2017013053(String), 1(Integer), 5(Integer)
+2020-07-01 15:37:26.949 [main] DEBUG c.s.dao.UserDaoInterface.getStudentCompetition - <==      Total: 0
+2020-07-01 15:37:26.961 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getStudentExam] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 15:37:26.961 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 15:37:26.962 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentExam - ==>  Preparing: select * from info_exam where student_id = ? limit ?,? 
+2020-07-01 15:37:26.963 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentExam - ==> Parameters: 2017013053(String), 1(Integer), 5(Integer)
+2020-07-01 15:37:27.013 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentExam - <==      Total: 5
+2020-07-01 15:37:27.018 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getStudentInfo] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 15:37:27.019 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 15:37:27.019 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentInfo - ==>  Preparing: SELECT * from users where id_number = ? 
+2020-07-01 15:37:27.020 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentInfo - ==> Parameters: 20200701(String)
+2020-07-01 15:37:27.068 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentInfo - <==      Total: 0
+2020-07-01 15:37:27.072 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getInternshipCount] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 15:37:27.072 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 15:37:27.072 [main] DEBUG com.steins.dao.UserDaoInterface.getInternshipCount - ==>  Preparing: select count(*) from info_internship where student_id = ? 
+2020-07-01 15:37:27.073 [main] DEBUG com.steins.dao.UserDaoInterface.getInternshipCount - ==> Parameters: 2017013053(String)
+2020-07-01 15:37:27.120 [main] DEBUG com.steins.dao.UserDaoInterface.getInternshipCount - <==      Total: 1
+2020-07-01 16:04:39.943 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.insertStudentOfInstitution] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:04:40.000 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:04:43.880 [main] DEBUG c.s.dao.InstitutionDao.insertStudentOfInstitution - ==>  Preparing: INSERT INTO info_student_institution (student_idNumber,institution_idNumber) VALUES (?,?) 
+2020-07-01 16:04:43.930 [main] DEBUG c.s.dao.InstitutionDao.insertStudentOfInstitution - ==> Parameters: test1(String), test2(String)
+2020-07-01 16:04:44.729 [main] DEBUG c.s.dao.InstitutionDao.insertStudentOfInstitution - <==    Updates: 1
+2020-07-01 16:04:44.859 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.updInternship] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 16:04:44.860 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:04:44.861 [main] DEBUG com.steins.dao.InstitutionDao.updInternship - ==>  Preparing: UPDATE info_internship SET period = ? WHERE company_name=? AND period=? AND student_id=? 
+2020-07-01 16:04:44.863 [main] DEBUG com.steins.dao.InstitutionDao.updInternship - ==> Parameters: (String), (String), (String), (String)
+2020-07-01 16:04:45.082 [main] DEBUG com.steins.dao.InstitutionDao.updInternship - <==    Updates: 23
+2020-07-01 16:04:45.087 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addInternship] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:04:45.088 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:04:45.089 [main] DEBUG com.steins.dao.InstitutionDao.addInternship - ==>  Preparing: INSERT INTO info_internship (record_time,recorder_id,student_id,period,company_name,remark,position) VALUES (?,?,?,?,?,?,?) 
+2020-07-01 16:04:45.093 [main] DEBUG com.steins.dao.InstitutionDao.addInternship - ==> Parameters: null, 2017013052(String), null, 2017(String), test1(String), null, null
+2020-07-01 16:04:45.894 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.getStudentsOfInstitutionCount] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:04:45.894 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:04:45.913 [main] DEBUG c.s.d.InstitutionDao.getStudentsOfInstitutionCount - ==>  Preparing: select count(*) from users where id_number in ( select student_idNumber from info_student_institution where institution_idNumber = ?) 
+2020-07-01 16:04:45.916 [main] DEBUG c.s.d.InstitutionDao.getStudentsOfInstitutionCount - ==> Parameters: test(String)
+2020-07-01 16:04:46.027 [main] DEBUG c.s.d.InstitutionDao.getStudentsOfInstitutionCount - <==      Total: 1
+2020-07-01 16:04:46.034 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.updCompetition] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 16:04:46.034 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:04:46.035 [main] DEBUG com.steins.dao.InstitutionDao.updCompetition - ==>  Preparing: UPDATE info_competition SET achievement =? WHERE competition_name =? AND student_id=? 
+2020-07-01 16:04:46.037 [main] DEBUG com.steins.dao.InstitutionDao.updCompetition - ==> Parameters: (String), (String), (String)
+2020-07-01 16:04:46.210 [main] DEBUG com.steins.dao.InstitutionDao.updCompetition - <==    Updates: 5
+2020-07-01 16:04:46.216 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addExam] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:04:46.217 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:04:46.217 [main] DEBUG com.steins.dao.InstitutionDao.addExam - ==>  Preparing: INSERT INTO info_exam (record_time,recorder_id,student_id,subject,grade,exam_name,score,remark) VALUES (?,?,?,?,?,?,?,?) 
+2020-07-01 16:04:46.221 [main] DEBUG com.steins.dao.InstitutionDao.addExam - ==> Parameters: null, 2017013052(String), null, null, 2017(String), test1(String), null, null
+2020-07-01 16:04:46.680 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.regist] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:04:46.681 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:04:46.681 [main] DEBUG com.steins.dao.InstitutionDao.regist - ==>  Preparing: INSERT INTO users (username,password,rating,id_number) VALUES (?,?,?,?) 
+2020-07-01 16:04:46.683 [main] DEBUG com.steins.dao.InstitutionDao.regist - ==> Parameters: 20200701(String), 123(String), 1(Integer), 20200701(String)
+2020-07-01 16:04:46.912 [main] DEBUG com.steins.dao.InstitutionDao.regist - <==    Updates: 1
+2020-07-01 16:04:46.915 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addCompetition] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:04:46.916 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:04:46.916 [main] DEBUG com.steins.dao.InstitutionDao.addCompetition - ==>  Preparing: INSERT INTO info_competition (record_time,recorder_id,student_id,competition_name,competition_degree,achievement,remark) VALUES (?,?,?,?,?,?,?) 
+2020-07-01 16:04:46.918 [main] DEBUG com.steins.dao.InstitutionDao.addCompetition - ==> Parameters: null, test(String), null, null, null, test(String), null
+2020-07-01 16:04:47.102 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.updExam] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 16:04:47.102 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:04:47.103 [main] DEBUG com.steins.dao.InstitutionDao.updExam - ==>  Preparing: UPDATE info_exam SET score = ? WHERE exam_name=? AND student_id =? AND grade = ? AND subject = ? 
+2020-07-01 16:04:47.104 [main] DEBUG com.steins.dao.InstitutionDao.updExam - ==> Parameters: (String), (String), (String), (String), (String)
+2020-07-01 16:04:47.279 [main] DEBUG com.steins.dao.InstitutionDao.updExam - <==    Updates: 35
+2020-07-01 16:04:47.283 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.getStudentsOfInstitution] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:04:47.283 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:04:47.284 [main] DEBUG c.s.dao.InstitutionDao.getStudentsOfInstitution - ==>  Preparing: select * from users where id_number in ( select student_idNumber from info_student_institution where institution_idNumber = ?) limit ?,? 
+2020-07-01 16:04:47.287 [main] DEBUG c.s.dao.InstitutionDao.getStudentsOfInstitution - ==> Parameters: test(String), 2017(Integer), 2017(Integer)
+2020-07-01 16:04:47.351 [main] DEBUG c.s.dao.InstitutionDao.getStudentsOfInstitution - <==      Total: 0
+2020-07-01 16:06:54.496 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.insertStudentOfInstitution] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:06:54.532 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:06:57.204 [main] DEBUG c.s.dao.InstitutionDao.insertStudentOfInstitution - ==>  Preparing: INSERT INTO info_student_institution (student_idNumber,institution_idNumber) VALUES (?,?) 
+2020-07-01 16:06:57.253 [main] DEBUG c.s.dao.InstitutionDao.insertStudentOfInstitution - ==> Parameters: test1(String), test2(String)
+2020-07-01 16:06:57.593 [main] DEBUG c.s.dao.InstitutionDao.insertStudentOfInstitution - <==    Updates: 1
+2020-07-01 16:06:57.647 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.updInternship] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 16:06:57.648 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:06:59.066 [main] DEBUG com.steins.dao.InstitutionDao.updInternship - ==>  Preparing: UPDATE info_internship SET period = ? WHERE company_name=? AND period=? AND student_id=? 
+2020-07-01 16:06:59.067 [main] DEBUG com.steins.dao.InstitutionDao.updInternship - ==> Parameters: (String), (String), (String), (String)
+2020-07-01 16:06:59.484 [main] DEBUG com.steins.dao.InstitutionDao.updInternship - <==    Updates: 23
+2020-07-01 16:06:59.492 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addInternship] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:06:59.493 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:06:59.684 [main] DEBUG com.steins.dao.InstitutionDao.addInternship - ==>  Preparing: INSERT INTO info_internship (record_time,recorder_id,student_id,period,company_name,remark,position) VALUES (?,?,?,?,?,?,?) 
+2020-07-01 16:06:59.687 [main] DEBUG com.steins.dao.InstitutionDao.addInternship - ==> Parameters: 20200701(String), 2017013052(String), null, 2017(String), test1(String), null, null
+2020-07-01 16:07:01.072 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.getStudentsOfInstitutionCount] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:07:01.072 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:07:01.160 [main] DEBUG c.s.d.InstitutionDao.getStudentsOfInstitutionCount - ==>  Preparing: select count(*) from users where id_number in ( select student_idNumber from info_student_institution where institution_idNumber = ?) 
+2020-07-01 16:07:01.161 [main] DEBUG c.s.d.InstitutionDao.getStudentsOfInstitutionCount - ==> Parameters: test(String)
+2020-07-01 16:07:01.575 [main] DEBUG c.s.d.InstitutionDao.getStudentsOfInstitutionCount - <==      Total: 1
+2020-07-01 16:07:01.594 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.updCompetition] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 16:07:01.594 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:07:02.012 [main] DEBUG com.steins.dao.InstitutionDao.updCompetition - ==>  Preparing: UPDATE info_competition SET achievement =? WHERE competition_name =? AND student_id=? 
+2020-07-01 16:07:02.014 [main] DEBUG com.steins.dao.InstitutionDao.updCompetition - ==> Parameters: (String), (String), (String)
+2020-07-01 16:07:02.701 [main] DEBUG com.steins.dao.InstitutionDao.updCompetition - <==    Updates: 5
+2020-07-01 16:07:02.706 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addExam] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:07:02.707 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:07:02.708 [main] DEBUG com.steins.dao.InstitutionDao.addExam - ==>  Preparing: INSERT INTO info_exam (record_time,recorder_id,student_id,subject,grade,exam_name,score,remark) VALUES (?,?,?,?,?,?,?,?) 
+2020-07-01 16:07:02.713 [main] DEBUG com.steins.dao.InstitutionDao.addExam - ==> Parameters: 20200701(String), 2017013052(String), null, null, 2017(String), test1(String), null, null
+2020-07-01 16:07:03.042 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.regist] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:07:03.042 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:07:03.205 [main] DEBUG com.steins.dao.InstitutionDao.regist - ==>  Preparing: INSERT INTO users (username,password,rating,id_number) VALUES (?,?,?,?) 
+2020-07-01 16:07:03.207 [main] DEBUG com.steins.dao.InstitutionDao.regist - ==> Parameters: 20200701(String), 123(String), 1(Integer), 20200701(String)
+2020-07-01 16:07:03.651 [main] DEBUG com.steins.dao.InstitutionDao.regist - <==    Updates: 1
+2020-07-01 16:07:03.657 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addCompetition] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:07:03.658 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:07:03.658 [main] DEBUG com.steins.dao.InstitutionDao.addCompetition - ==>  Preparing: INSERT INTO info_competition (record_time,recorder_id,student_id,competition_name,competition_degree,achievement,remark) VALUES (?,?,?,?,?,?,?) 
+2020-07-01 16:07:03.660 [main] DEBUG com.steins.dao.InstitutionDao.addCompetition - ==> Parameters: 20200701(String), test(String), null, null, null, test(String), null
+2020-07-01 16:07:03.872 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.updExam] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 16:07:03.872 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:07:03.872 [main] DEBUG com.steins.dao.InstitutionDao.updExam - ==>  Preparing: UPDATE info_exam SET score = ? WHERE exam_name=? AND student_id =? AND grade = ? AND subject = ? 
+2020-07-01 16:07:03.873 [main] DEBUG com.steins.dao.InstitutionDao.updExam - ==> Parameters: (String), (String), (String), (String), (String)
+2020-07-01 16:07:04.032 [main] DEBUG com.steins.dao.InstitutionDao.updExam - <==    Updates: 35
+2020-07-01 16:07:04.037 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.getStudentsOfInstitution] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:07:04.038 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:07:04.048 [main] DEBUG c.s.dao.InstitutionDao.getStudentsOfInstitution - ==>  Preparing: select * from users where id_number in ( select student_idNumber from info_student_institution where institution_idNumber = ?) limit ?,? 
+2020-07-01 16:07:04.050 [main] DEBUG c.s.dao.InstitutionDao.getStudentsOfInstitution - ==> Parameters: test(String), 2017(Integer), 2017(Integer)
+2020-07-01 16:07:04.308 [main] DEBUG c.s.dao.InstitutionDao.getStudentsOfInstitution - <==      Total: 0
+2020-07-01 16:09:50.130 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.insertStudentOfInstitution] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:09:50.165 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:09:51.746 [main] DEBUG c.s.dao.InstitutionDao.insertStudentOfInstitution - ==>  Preparing: INSERT INTO info_student_institution (student_idNumber,institution_idNumber) VALUES (?,?) 
+2020-07-01 16:09:51.796 [main] DEBUG c.s.dao.InstitutionDao.insertStudentOfInstitution - ==> Parameters: test1(String), test2(String)
+2020-07-01 16:09:51.962 [main] DEBUG c.s.dao.InstitutionDao.insertStudentOfInstitution - <==    Updates: 1
+2020-07-01 16:09:52.024 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.updInternship] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 16:09:52.025 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:09:52.026 [main] DEBUG com.steins.dao.InstitutionDao.updInternship - ==>  Preparing: UPDATE info_internship SET period = ? WHERE company_name=? AND period=? AND student_id=? 
+2020-07-01 16:09:52.027 [main] DEBUG com.steins.dao.InstitutionDao.updInternship - ==> Parameters: (String), (String), (String), (String)
+2020-07-01 16:09:52.215 [main] DEBUG com.steins.dao.InstitutionDao.updInternship - <==    Updates: 23
+2020-07-01 16:09:52.219 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addInternship] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:09:52.219 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:09:52.220 [main] DEBUG com.steins.dao.InstitutionDao.addInternship - ==>  Preparing: INSERT INTO info_internship (record_time,recorder_id,student_id,period,company_name,remark,position) VALUES (?,?,?,?,?,?,?) 
+2020-07-01 16:09:52.223 [main] DEBUG com.steins.dao.InstitutionDao.addInternship - ==> Parameters: 20200701(String), 2017013052(String), 2017(String), 2017(String), test1(String), null, null
+2020-07-01 16:09:52.397 [main] DEBUG com.steins.dao.InstitutionDao.addInternship - <==    Updates: 1
+2020-07-01 16:09:52.404 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.getStudentsOfInstitutionCount] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:09:52.405 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:09:52.533 [main] DEBUG c.s.d.InstitutionDao.getStudentsOfInstitutionCount - ==>  Preparing: select count(*) from users where id_number in ( select student_idNumber from info_student_institution where institution_idNumber = ?) 
+2020-07-01 16:09:52.535 [main] DEBUG c.s.d.InstitutionDao.getStudentsOfInstitutionCount - ==> Parameters: test(String)
+2020-07-01 16:09:52.671 [main] DEBUG c.s.d.InstitutionDao.getStudentsOfInstitutionCount - <==      Total: 1
+2020-07-01 16:09:52.697 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.updCompetition] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 16:09:52.697 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:09:52.699 [main] DEBUG com.steins.dao.InstitutionDao.updCompetition - ==>  Preparing: UPDATE info_competition SET achievement =? WHERE competition_name =? AND student_id=? 
+2020-07-01 16:09:52.700 [main] DEBUG com.steins.dao.InstitutionDao.updCompetition - ==> Parameters: (String), (String), (String)
+2020-07-01 16:09:52.921 [main] DEBUG com.steins.dao.InstitutionDao.updCompetition - <==    Updates: 5
+2020-07-01 16:09:52.925 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addExam] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:09:52.926 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:09:52.927 [main] DEBUG com.steins.dao.InstitutionDao.addExam - ==>  Preparing: INSERT INTO info_exam (record_time,recorder_id,student_id,subject,grade,exam_name,score,remark) VALUES (?,?,?,?,?,?,?,?) 
+2020-07-01 16:09:52.930 [main] DEBUG com.steins.dao.InstitutionDao.addExam - ==> Parameters: 20200701(String), 2017013052(String), 2017(String), null, 2017(String), test1(String), null, null
+2020-07-01 16:09:53.415 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.regist] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:09:53.415 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:09:53.418 [main] DEBUG com.steins.dao.InstitutionDao.regist - ==>  Preparing: INSERT INTO users (username,password,rating,id_number) VALUES (?,?,?,?) 
+2020-07-01 16:09:53.422 [main] DEBUG com.steins.dao.InstitutionDao.regist - ==> Parameters: 20200701(String), 123(String), 1(Integer), 20200701(String)
+2020-07-01 16:09:53.661 [main] DEBUG com.steins.dao.InstitutionDao.regist - <==    Updates: 1
+2020-07-01 16:09:53.668 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addCompetition] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:09:53.669 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:09:53.669 [main] DEBUG com.steins.dao.InstitutionDao.addCompetition - ==>  Preparing: INSERT INTO info_competition (record_time,recorder_id,student_id,competition_name,competition_degree,achievement,remark) VALUES (?,?,?,?,?,?,?) 
+2020-07-01 16:09:53.672 [main] DEBUG com.steins.dao.InstitutionDao.addCompetition - ==> Parameters: 20200701(String), test(String), 2017(String), null, null, test(String), null
+2020-07-01 16:09:55.014 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.updExam] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 16:09:55.016 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:09:55.016 [main] DEBUG com.steins.dao.InstitutionDao.updExam - ==>  Preparing: UPDATE info_exam SET score = ? WHERE exam_name=? AND student_id =? AND grade = ? AND subject = ? 
+2020-07-01 16:09:55.018 [main] DEBUG com.steins.dao.InstitutionDao.updExam - ==> Parameters: (String), (String), (String), (String), (String)
+2020-07-01 16:09:55.436 [main] DEBUG com.steins.dao.InstitutionDao.updExam - <==    Updates: 35
+2020-07-01 16:09:55.441 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.getStudentsOfInstitution] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:09:55.441 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:09:55.442 [main] DEBUG c.s.dao.InstitutionDao.getStudentsOfInstitution - ==>  Preparing: select * from users where id_number in ( select student_idNumber from info_student_institution where institution_idNumber = ?) limit ?,? 
+2020-07-01 16:09:55.444 [main] DEBUG c.s.dao.InstitutionDao.getStudentsOfInstitution - ==> Parameters: test(String), 2017(Integer), 2017(Integer)
+2020-07-01 16:09:55.565 [main] DEBUG c.s.dao.InstitutionDao.getStudentsOfInstitution - <==      Total: 0
+2020-07-01 16:10:43.832 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addCompetition] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:10:43.888 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:10:49.951 [main] DEBUG com.steins.dao.InstitutionDao.addCompetition - ==>  Preparing: INSERT INTO info_competition (record_time,recorder_id,student_id,competition_name,competition_degree,achievement,remark) VALUES (?,?,?,?,?,?,?) 
+2020-07-01 16:10:50.012 [main] DEBUG com.steins.dao.InstitutionDao.addCompetition - ==> Parameters: 20200701(String), test(String), 2017(String), test(String), null, test(String), null
+2020-07-01 16:11:50.358 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addCompetition] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:11:50.392 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:11:51.510 [main] DEBUG com.steins.dao.InstitutionDao.addCompetition - ==>  Preparing: INSERT INTO info_competition (record_time,recorder_id,student_id,competition_name,competition_degree,achievement,remark) VALUES (?,?,?,?,?,?,?) 
+2020-07-01 16:11:51.553 [main] DEBUG com.steins.dao.InstitutionDao.addCompetition - ==> Parameters: 20200701(String), test(String), 2017(String), test(String), test(String), test(String), test(String)
+2020-07-01 16:11:51.655 [main] DEBUG com.steins.dao.InstitutionDao.addCompetition - <==    Updates: 1
+2020-07-01 16:12:06.611 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addExam] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:12:06.628 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:12:09.427 [main] DEBUG com.steins.dao.InstitutionDao.addExam - ==>  Preparing: INSERT INTO info_exam (record_time,recorder_id,student_id,subject,grade,exam_name,score,remark) VALUES (?,?,?,?,?,?,?,?) 
+2020-07-01 16:12:09.475 [main] DEBUG com.steins.dao.InstitutionDao.addExam - ==> Parameters: 20200701(String), 2017013052(String), 2017(String), test(String), 2017(String), test1(String), null, null
+2020-07-01 16:12:54.918 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addExam] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:12:54.943 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:12:56.144 [main] DEBUG com.steins.dao.InstitutionDao.addExam - ==>  Preparing: INSERT INTO info_exam (record_time,recorder_id,student_id,subject,grade,exam_name,score,remark) VALUES (?,?,?,?,?,?,?,?) 
+2020-07-01 16:12:56.189 [main] DEBUG com.steins.dao.InstitutionDao.addExam - ==> Parameters: 20200701(String), 2017013052(String), 2017(String), test(String), 2017(String), test1(String), 80(String), test(String)
+2020-07-01 16:12:56.336 [main] DEBUG com.steins.dao.InstitutionDao.addExam - <==    Updates: 1
+2020-07-01 16:13:36.432 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.insertStudentOfInstitution] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:13:36.459 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:13:37.722 [main] DEBUG c.s.dao.InstitutionDao.insertStudentOfInstitution - ==>  Preparing: INSERT INTO info_student_institution (student_idNumber,institution_idNumber) VALUES (?,?) 
+2020-07-01 16:13:37.780 [main] DEBUG c.s.dao.InstitutionDao.insertStudentOfInstitution - ==> Parameters: test1(String), test2(String)
+2020-07-01 16:13:37.884 [main] DEBUG c.s.dao.InstitutionDao.insertStudentOfInstitution - <==    Updates: 1
+2020-07-01 16:13:37.951 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.updInternship] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 16:13:37.954 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:13:37.959 [main] DEBUG com.steins.dao.InstitutionDao.updInternship - ==>  Preparing: UPDATE info_internship SET period = ? WHERE company_name=? AND period=? AND student_id=? 
+2020-07-01 16:13:37.961 [main] DEBUG com.steins.dao.InstitutionDao.updInternship - ==> Parameters: (String), (String), (String), (String)
+2020-07-01 16:13:38.115 [main] DEBUG com.steins.dao.InstitutionDao.updInternship - <==    Updates: 23
+2020-07-01 16:13:38.119 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addInternship] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:13:38.120 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:13:38.121 [main] DEBUG com.steins.dao.InstitutionDao.addInternship - ==>  Preparing: INSERT INTO info_internship (record_time,recorder_id,student_id,period,company_name,remark,position) VALUES (?,?,?,?,?,?,?) 
+2020-07-01 16:13:38.125 [main] DEBUG com.steins.dao.InstitutionDao.addInternship - ==> Parameters: 20200701(String), 2017013052(String), 2017(String), 2017(String), test1(String), null, null
+2020-07-01 16:13:38.255 [main] DEBUG com.steins.dao.InstitutionDao.addInternship - <==    Updates: 1
+2020-07-01 16:13:38.260 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.getStudentsOfInstitutionCount] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:13:38.260 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:13:38.278 [main] DEBUG c.s.d.InstitutionDao.getStudentsOfInstitutionCount - ==>  Preparing: select count(*) from users where id_number in ( select student_idNumber from info_student_institution where institution_idNumber = ?) 
+2020-07-01 16:13:38.279 [main] DEBUG c.s.d.InstitutionDao.getStudentsOfInstitutionCount - ==> Parameters: test(String)
+2020-07-01 16:13:38.343 [main] DEBUG c.s.d.InstitutionDao.getStudentsOfInstitutionCount - <==      Total: 1
+2020-07-01 16:13:38.373 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.updCompetition] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 16:13:38.374 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:13:38.376 [main] DEBUG com.steins.dao.InstitutionDao.updCompetition - ==>  Preparing: UPDATE info_competition SET achievement =? WHERE competition_name =? AND student_id=? 
+2020-07-01 16:13:38.378 [main] DEBUG com.steins.dao.InstitutionDao.updCompetition - ==> Parameters: (String), (String), (String)
+2020-07-01 16:13:38.731 [main] DEBUG com.steins.dao.InstitutionDao.updCompetition - <==    Updates: 5
+2020-07-01 16:13:38.736 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addExam] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:13:38.736 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:13:38.737 [main] DEBUG com.steins.dao.InstitutionDao.addExam - ==>  Preparing: INSERT INTO info_exam (record_time,recorder_id,student_id,subject,grade,exam_name,score,remark) VALUES (?,?,?,?,?,?,?,?) 
+2020-07-01 16:13:38.740 [main] DEBUG com.steins.dao.InstitutionDao.addExam - ==> Parameters: 20200701(String), 2017013052(String), 2017(String), test(String), 2017(String), test1(String), 80(String), test(String)
+2020-07-01 16:13:39.040 [main] DEBUG com.steins.dao.InstitutionDao.addExam - <==    Updates: 1
+2020-07-01 16:13:39.044 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.regist] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:13:39.044 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:13:39.045 [main] DEBUG com.steins.dao.InstitutionDao.regist - ==>  Preparing: INSERT INTO users (username,password,rating,id_number) VALUES (?,?,?,?) 
+2020-07-01 16:13:39.048 [main] DEBUG com.steins.dao.InstitutionDao.regist - ==> Parameters: 20200701(String), 123(String), 1(Integer), 20200701(String)
+2020-07-01 16:13:39.539 [main] DEBUG com.steins.dao.InstitutionDao.regist - <==    Updates: 1
+2020-07-01 16:13:39.547 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addCompetition] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:13:39.547 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:13:39.547 [main] DEBUG com.steins.dao.InstitutionDao.addCompetition - ==>  Preparing: INSERT INTO info_competition (record_time,recorder_id,student_id,competition_name,competition_degree,achievement,remark) VALUES (?,?,?,?,?,?,?) 
+2020-07-01 16:13:39.549 [main] DEBUG com.steins.dao.InstitutionDao.addCompetition - ==> Parameters: 20200701(String), test(String), 2017(String), test(String), test(String), test(String), test(String)
+2020-07-01 16:13:39.660 [main] DEBUG com.steins.dao.InstitutionDao.addCompetition - <==    Updates: 1
+2020-07-01 16:13:39.664 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.updExam] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 16:13:39.665 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:13:39.666 [main] DEBUG com.steins.dao.InstitutionDao.updExam - ==>  Preparing: UPDATE info_exam SET score = ? WHERE exam_name=? AND student_id =? AND grade = ? AND subject = ? 
+2020-07-01 16:13:39.667 [main] DEBUG com.steins.dao.InstitutionDao.updExam - ==> Parameters: (String), (String), (String), (String), (String)
+2020-07-01 16:13:39.763 [main] DEBUG com.steins.dao.InstitutionDao.updExam - <==    Updates: 35
+2020-07-01 16:13:39.771 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.getStudentsOfInstitution] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:13:39.772 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:13:39.772 [main] DEBUG c.s.dao.InstitutionDao.getStudentsOfInstitution - ==>  Preparing: select * from users where id_number in ( select student_idNumber from info_student_institution where institution_idNumber = ?) limit ?,? 
+2020-07-01 16:13:39.774 [main] DEBUG c.s.dao.InstitutionDao.getStudentsOfInstitution - ==> Parameters: test(String), 2017(Integer), 2017(Integer)
+2020-07-01 16:13:39.850 [main] DEBUG c.s.dao.InstitutionDao.getStudentsOfInstitution - <==      Total: 0
+2020-07-01 16:15:45.641 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.insertStudentOfInstitution] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:15:45.690 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:15:51.568 [main] DEBUG c.s.dao.InstitutionDao.insertStudentOfInstitution - ==>  Preparing: INSERT INTO info_student_institution (student_idNumber,institution_idNumber) VALUES (?,?) 
+2020-07-01 16:15:51.618 [main] DEBUG c.s.dao.InstitutionDao.insertStudentOfInstitution - ==> Parameters: test1(String), test2(String)
+2020-07-01 16:15:51.720 [main] DEBUG c.s.dao.InstitutionDao.insertStudentOfInstitution - <==    Updates: 1
+2020-07-01 16:15:51.827 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.updInternship] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 16:15:51.827 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:15:51.945 [main] DEBUG com.steins.dao.InstitutionDao.updInternship - ==>  Preparing: UPDATE info_internship SET period = ? WHERE company_name=? AND period=? AND student_id=? 
+2020-07-01 16:15:51.946 [main] DEBUG com.steins.dao.InstitutionDao.updInternship - ==> Parameters: (String), (String), (String), (String)
+2020-07-01 16:15:52.046 [main] DEBUG com.steins.dao.InstitutionDao.updInternship - <==    Updates: 23
+2020-07-01 16:15:52.051 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addInternship] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:15:52.051 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:15:52.302 [main] DEBUG com.steins.dao.InstitutionDao.addInternship - ==>  Preparing: INSERT INTO info_internship (record_time,recorder_id,student_id,period,company_name,remark,position) VALUES (?,?,?,?,?,?,?) 
+2020-07-01 16:15:52.306 [main] DEBUG com.steins.dao.InstitutionDao.addInternship - ==> Parameters: 20200701(String), 2017013052(String), 2017(String), 2017(String), test1(String), null, null
+2020-07-01 16:15:52.435 [main] DEBUG com.steins.dao.InstitutionDao.addInternship - <==    Updates: 1
+2020-07-01 16:15:52.441 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.getStudentsOfInstitutionCount] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:15:52.441 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:15:52.672 [main] DEBUG c.s.d.InstitutionDao.getStudentsOfInstitutionCount - ==>  Preparing: select count(*) from users where id_number in ( select student_idNumber from info_student_institution where institution_idNumber = ?) 
+2020-07-01 16:15:52.673 [main] DEBUG c.s.d.InstitutionDao.getStudentsOfInstitutionCount - ==> Parameters: test(String)
+2020-07-01 16:15:52.733 [main] DEBUG c.s.d.InstitutionDao.getStudentsOfInstitutionCount - <==      Total: 1
+2020-07-01 16:15:52.753 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.updCompetition] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 16:15:52.753 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:15:53.051 [main] DEBUG com.steins.dao.InstitutionDao.updCompetition - ==>  Preparing: UPDATE info_competition SET achievement =? WHERE competition_name =? AND student_id=? 
+2020-07-01 16:15:53.053 [main] DEBUG com.steins.dao.InstitutionDao.updCompetition - ==> Parameters: (String), (String), (String)
+2020-07-01 16:15:53.176 [main] DEBUG com.steins.dao.InstitutionDao.updCompetition - <==    Updates: 5
+2020-07-01 16:15:53.181 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addExam] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:15:53.182 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:15:53.427 [main] DEBUG com.steins.dao.InstitutionDao.addExam - ==>  Preparing: INSERT INTO info_exam (record_time,recorder_id,student_id,subject,grade,exam_name,score,remark) VALUES (?,?,?,?,?,?,?,?) 
+2020-07-01 16:15:53.430 [main] DEBUG com.steins.dao.InstitutionDao.addExam - ==> Parameters: 20200701(String), 2017013052(String), 2017(String), test(String), 2017(String), test1(String), 80(String), test(String)
+2020-07-01 16:15:53.582 [main] DEBUG com.steins.dao.InstitutionDao.addExam - <==    Updates: 1
+2020-07-01 16:15:53.586 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.regist] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:15:53.586 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:15:53.841 [main] DEBUG com.steins.dao.InstitutionDao.regist - ==>  Preparing: INSERT INTO users (username,password,rating,id_number) VALUES (?,?,?,?) 
+2020-07-01 16:15:53.843 [main] DEBUG com.steins.dao.InstitutionDao.regist - ==> Parameters: 20200701(String), 123(String), 1(Integer), 20200701(String)
+2020-07-01 16:15:53.944 [main] DEBUG com.steins.dao.InstitutionDao.regist - <==    Updates: 1
+2020-07-01 16:15:53.948 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addCompetition] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:15:53.949 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:15:54.235 [main] DEBUG com.steins.dao.InstitutionDao.addCompetition - ==>  Preparing: INSERT INTO info_competition (record_time,recorder_id,student_id,competition_name,competition_degree,achievement,remark) VALUES (?,?,?,?,?,?,?) 
+2020-07-01 16:15:54.238 [main] DEBUG com.steins.dao.InstitutionDao.addCompetition - ==> Parameters: 20200701(String), test(String), 2017(String), test(String), test(String), test(String), test(String)
+2020-07-01 16:15:54.339 [main] DEBUG com.steins.dao.InstitutionDao.addCompetition - <==    Updates: 1
+2020-07-01 16:15:54.343 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.updExam] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 16:15:54.343 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:15:54.344 [main] DEBUG com.steins.dao.InstitutionDao.updExam - ==>  Preparing: UPDATE info_exam SET score = ? WHERE exam_name=? AND student_id =? AND grade = ? AND subject = ? 
+2020-07-01 16:15:54.345 [main] DEBUG com.steins.dao.InstitutionDao.updExam - ==> Parameters: (String), (String), (String), (String), (String)
+2020-07-01 16:15:54.456 [main] DEBUG com.steins.dao.InstitutionDao.updExam - <==    Updates: 35
+2020-07-01 16:15:54.462 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.getStudentsOfInstitution] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:15:54.462 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:15:54.463 [main] DEBUG c.s.dao.InstitutionDao.getStudentsOfInstitution - ==>  Preparing: select * from users where id_number in ( select student_idNumber from info_student_institution where institution_idNumber = ?) limit ?,? 
+2020-07-01 16:15:54.464 [main] DEBUG c.s.dao.InstitutionDao.getStudentsOfInstitution - ==> Parameters: test(String), 2017(Integer), 2017(Integer)
+2020-07-01 16:15:54.514 [main] DEBUG c.s.dao.InstitutionDao.getStudentsOfInstitution - <==      Total: 0
+2020-07-01 16:17:40.094 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.insertStudentOfInstitution] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:17:40.119 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:17:41.302 [main] DEBUG c.s.dao.InstitutionDao.insertStudentOfInstitution - ==>  Preparing: INSERT INTO info_student_institution (student_idNumber,institution_idNumber) VALUES (?,?) 
+2020-07-01 16:17:41.371 [main] DEBUG c.s.dao.InstitutionDao.insertStudentOfInstitution - ==> Parameters: test1(String), test2(String)
+2020-07-01 16:17:41.503 [main] DEBUG c.s.dao.InstitutionDao.insertStudentOfInstitution - <==    Updates: 1
+2020-07-01 16:17:41.592 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.updInternship] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 16:17:41.592 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:17:41.594 [main] DEBUG com.steins.dao.InstitutionDao.updInternship - ==>  Preparing: UPDATE info_internship SET period = ? WHERE company_name=? AND period=? AND student_id=? 
+2020-07-01 16:17:41.595 [main] DEBUG com.steins.dao.InstitutionDao.updInternship - ==> Parameters: (String), (String), (String), (String)
+2020-07-01 16:17:41.694 [main] DEBUG com.steins.dao.InstitutionDao.updInternship - <==    Updates: 23
+2020-07-01 16:17:41.699 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addInternship] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:17:41.699 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:17:41.700 [main] DEBUG com.steins.dao.InstitutionDao.addInternship - ==>  Preparing: INSERT INTO info_internship (record_time,recorder_id,student_id,period,company_name,remark,position) VALUES (?,?,?,?,?,?,?) 
+2020-07-01 16:17:41.707 [main] DEBUG com.steins.dao.InstitutionDao.addInternship - ==> Parameters: 20200701(String), 2017013052(String), 2017(String), 2017(String), test1(String), null, null
+2020-07-01 16:17:41.805 [main] DEBUG com.steins.dao.InstitutionDao.addInternship - <==    Updates: 1
+2020-07-01 16:17:41.810 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.getStudentsOfInstitutionCount] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:17:41.810 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:17:41.813 [main] DEBUG c.s.d.InstitutionDao.getStudentsOfInstitutionCount - ==>  Preparing: select count(*) from users where id_number in ( select student_idNumber from info_student_institution where institution_idNumber = ?) 
+2020-07-01 16:17:41.814 [main] DEBUG c.s.d.InstitutionDao.getStudentsOfInstitutionCount - ==> Parameters: test(String)
+2020-07-01 16:17:41.902 [main] DEBUG c.s.d.InstitutionDao.getStudentsOfInstitutionCount - <==      Total: 1
+2020-07-01 16:17:41.917 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.updCompetition] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 16:17:41.917 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:17:41.919 [main] DEBUG com.steins.dao.InstitutionDao.updCompetition - ==>  Preparing: UPDATE info_competition SET achievement =? WHERE competition_name =? AND student_id=? 
+2020-07-01 16:17:41.920 [main] DEBUG com.steins.dao.InstitutionDao.updCompetition - ==> Parameters: (String), (String), (String)
+2020-07-01 16:17:42.050 [main] DEBUG com.steins.dao.InstitutionDao.updCompetition - <==    Updates: 5
+2020-07-01 16:17:42.055 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addExam] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:17:42.055 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:17:42.056 [main] DEBUG com.steins.dao.InstitutionDao.addExam - ==>  Preparing: INSERT INTO info_exam (record_time,recorder_id,student_id,subject,grade,exam_name,score,remark) VALUES (?,?,?,?,?,?,?,?) 
+2020-07-01 16:17:42.059 [main] DEBUG com.steins.dao.InstitutionDao.addExam - ==> Parameters: 20200701(String), 2017013052(String), 2017(String), test(String), 2017(String), test1(String), 80(String), test(String)
+2020-07-01 16:17:42.176 [main] DEBUG com.steins.dao.InstitutionDao.addExam - <==    Updates: 1
+2020-07-01 16:17:42.180 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.regist] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:17:42.180 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:17:42.181 [main] DEBUG com.steins.dao.InstitutionDao.regist - ==>  Preparing: INSERT INTO users (username,password,rating,id_number) VALUES (?,?,?,?) 
+2020-07-01 16:17:42.183 [main] DEBUG com.steins.dao.InstitutionDao.regist - ==> Parameters: 20200701(String), 123(String), 1(Integer), 20200701(String)
+2020-07-01 16:17:42.333 [main] DEBUG com.steins.dao.InstitutionDao.regist - <==    Updates: 1
+2020-07-01 16:17:42.338 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.addCompetition] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:17:42.338 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:17:42.339 [main] DEBUG com.steins.dao.InstitutionDao.addCompetition - ==>  Preparing: INSERT INTO info_competition (record_time,recorder_id,student_id,competition_name,competition_degree,achievement,remark) VALUES (?,?,?,?,?,?,?) 
+2020-07-01 16:17:42.341 [main] DEBUG com.steins.dao.InstitutionDao.addCompetition - ==> Parameters: 20200701(String), test(String), 2017(String), test(String), test(String), test(String), test(String)
+2020-07-01 16:17:42.465 [main] DEBUG com.steins.dao.InstitutionDao.addCompetition - <==    Updates: 1
+2020-07-01 16:17:42.470 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.updExam] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 16:17:42.470 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:17:42.471 [main] DEBUG com.steins.dao.InstitutionDao.updExam - ==>  Preparing: UPDATE info_exam SET score = ? WHERE exam_name=? AND student_id =? AND grade = ? AND subject = ? 
+2020-07-01 16:17:42.472 [main] DEBUG com.steins.dao.InstitutionDao.updExam - ==> Parameters: (String), (String), (String), (String), (String)
+2020-07-01 16:17:42.569 [main] DEBUG com.steins.dao.InstitutionDao.updExam - <==    Updates: 35
+2020-07-01 16:17:42.577 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.InstitutionDao.getStudentsOfInstitution] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:17:42.577 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:17:42.577 [main] DEBUG c.s.dao.InstitutionDao.getStudentsOfInstitution - ==>  Preparing: select * from users where id_number in ( select student_idNumber from info_student_institution where institution_idNumber = ?) limit ?,? 
+2020-07-01 16:17:42.578 [main] DEBUG c.s.dao.InstitutionDao.getStudentsOfInstitution - ==> Parameters: test(String), 2017(Integer), 2017(Integer)
+2020-07-01 16:17:42.624 [main] DEBUG c.s.dao.InstitutionDao.getStudentsOfInstitution - <==      Total: 0
+2020-07-01 16:21:50.366 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.LogDaoInterface.addLog] use [master] Strategy, SqlCommanType [INSERT]..
+2020-07-01 16:21:50.406 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:21:52.137 [main] DEBUG com.steins.dao.LogDaoInterface.addLog - ==>  Preparing: INSERT into systemLog(requestIp,createDate,description,createBy) value (?,?,?,?) 
+2020-07-01 16:21:52.205 [main] DEBUG com.steins.dao.LogDaoInterface.addLog - ==> Parameters: localhost(String), 202007(String), test(String), test(String)
+2020-07-01 16:21:52.328 [main] DEBUG com.steins.dao.LogDaoInterface.addLog - <==    Updates: 1
+2020-07-01 16:21:52.386 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.LogDaoInterface.getLogCount] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:21:52.386 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:21:52.412 [main] DEBUG com.steins.dao.LogDaoInterface.getLogCount - ==>  Preparing: select count(*) from systemLog 
+2020-07-01 16:21:52.413 [main] DEBUG com.steins.dao.LogDaoInterface.getLogCount - ==> Parameters: 
+2020-07-01 16:21:52.503 [main] DEBUG com.steins.dao.LogDaoInterface.getLogCount - <==      Total: 1
+2020-07-01 16:21:52.541 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.LogDaoInterface.getAllLogs] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:21:52.541 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:21:52.543 [main] DEBUG com.steins.dao.LogDaoInterface.getAllLogs - ==>  Preparing: select * from systemLog limit ?,? 
+2020-07-01 16:21:52.545 [main] DEBUG com.steins.dao.LogDaoInterface.getAllLogs - ==> Parameters: 0(Integer), 5(Integer)
+2020-07-01 16:21:52.659 [main] DEBUG com.steins.dao.LogDaoInterface.getAllLogs - <==      Total: 5
+2020-07-01 16:23:15.538 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getCompetitionCount] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:23:15.600 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:23:16.855 [main] DEBUG c.steins.dao.UserDaoInterface.getCompetitionCount - ==>  Preparing: select count(*) from info_competition where student_id = ? 
+2020-07-01 16:23:16.903 [main] DEBUG c.steins.dao.UserDaoInterface.getCompetitionCount - ==> Parameters: 2017013053(String)
+2020-07-01 16:23:16.975 [main] DEBUG c.steins.dao.UserDaoInterface.getCompetitionCount - <==      Total: 1
+2020-07-01 16:23:17.047 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.loginUser] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:23:17.048 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:23:17.054 [main] DEBUG com.steins.dao.UserDaoInterface.loginUser - ==>  Preparing: SELECT * from users where username = ? and password = ? 
+2020-07-01 16:23:17.055 [main] DEBUG com.steins.dao.UserDaoInterface.loginUser - ==> Parameters: lp(String), 123456(String)
+2020-07-01 16:23:17.108 [main] DEBUG com.steins.dao.UserDaoInterface.loginUser - <==      Total: 1
+2020-07-01 16:23:17.114 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.updateUser] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 16:23:17.116 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:23:17.179 [main] DEBUG com.steins.dao.UserDaoInterface.updateUser - ==>  Preparing: update users SET username = ?, password = ?, rating = ?, sex = ? where id_number = ? 
+2020-07-01 16:23:17.181 [main] DEBUG com.steins.dao.UserDaoInterface.updateUser - ==> Parameters: 20200701(String), 123(String), 1(Integer), 0(Integer), 20200701(String)
+2020-07-01 16:23:17.320 [main] DEBUG com.steins.dao.UserDaoInterface.updateUser - <==    Updates: 6
+2020-07-01 16:23:17.326 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getExamCount] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:23:17.326 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:23:17.327 [main] DEBUG com.steins.dao.UserDaoInterface.getExamCount - ==>  Preparing: select count(*) from info_exam where student_id = ? 
+2020-07-01 16:23:17.329 [main] DEBUG com.steins.dao.UserDaoInterface.getExamCount - ==> Parameters: 2017013053(String)
+2020-07-01 16:23:17.394 [main] DEBUG com.steins.dao.UserDaoInterface.getExamCount - <==      Total: 1
+2020-07-01 16:23:17.401 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getStudentInternship] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:23:17.401 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:23:17.404 [main] DEBUG c.steins.dao.UserDaoInterface.getStudentInternship - ==>  Preparing: select * from info_internship where student_id = ? limit ?,? 
+2020-07-01 16:23:17.406 [main] DEBUG c.steins.dao.UserDaoInterface.getStudentInternship - ==> Parameters: 2017013053(String), 1(Integer), 5(Integer)
+2020-07-01 16:23:17.499 [main] DEBUG c.steins.dao.UserDaoInterface.getStudentInternship - <==      Total: 5
+2020-07-01 16:23:17.508 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getInfoHeaderByIdNumber] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:23:17.510 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:23:17.511 [main] DEBUG c.s.dao.UserDaoInterface.getInfoHeaderByIdNumber - ==>  Preparing: select * from info_header where id_number = ? 
+2020-07-01 16:23:17.512 [main] DEBUG c.s.dao.UserDaoInterface.getInfoHeaderByIdNumber - ==> Parameters: 2017013053(String)
+2020-07-01 16:23:17.559 [main] DEBUG c.s.dao.UserDaoInterface.getInfoHeaderByIdNumber - <==      Total: 1
+2020-07-01 16:23:17.564 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getStudentCompetition] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:23:17.564 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:23:17.642 [main] DEBUG c.s.dao.UserDaoInterface.getStudentCompetition - ==>  Preparing: select * from info_competition where student_id = ? limit ?,? 
+2020-07-01 16:23:17.643 [main] DEBUG c.s.dao.UserDaoInterface.getStudentCompetition - ==> Parameters: 2017013053(String), 1(Integer), 5(Integer)
+2020-07-01 16:23:17.701 [main] DEBUG c.s.dao.UserDaoInterface.getStudentCompetition - <==      Total: 0
+2020-07-01 16:23:17.709 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getStudentExam] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:23:17.709 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:23:17.710 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentExam - ==>  Preparing: select * from info_exam where student_id = ? limit ?,? 
+2020-07-01 16:23:17.710 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentExam - ==> Parameters: 2017013053(String), 1(Integer), 5(Integer)
+2020-07-01 16:23:17.782 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentExam - <==      Total: 5
+2020-07-01 16:23:17.787 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getStudentInfo] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:23:17.787 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:23:17.788 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentInfo - ==>  Preparing: SELECT * from users where id_number = ? 
+2020-07-01 16:23:17.789 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentInfo - ==> Parameters: 20200701(String)
+2020-07-01 16:23:17.864 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentInfo - <==      Total: 6
+2020-07-01 16:23:17.902 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getInternshipCount] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:23:17.902 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:23:17.903 [main] DEBUG com.steins.dao.UserDaoInterface.getInternshipCount - ==>  Preparing: select count(*) from info_internship where student_id = ? 
+2020-07-01 16:23:17.904 [main] DEBUG com.steins.dao.UserDaoInterface.getInternshipCount - ==> Parameters: 2017013053(String)
+2020-07-01 16:23:17.959 [main] DEBUG com.steins.dao.UserDaoInterface.getInternshipCount - <==      Total: 1
+2020-07-01 16:24:59.258 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getCompetitionCount] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:24:59.279 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:25:00.619 [main] DEBUG c.steins.dao.UserDaoInterface.getCompetitionCount - ==>  Preparing: select count(*) from info_competition where student_id = ? 
+2020-07-01 16:25:00.692 [main] DEBUG c.steins.dao.UserDaoInterface.getCompetitionCount - ==> Parameters: 2017013053(String)
+2020-07-01 16:25:00.769 [main] DEBUG c.steins.dao.UserDaoInterface.getCompetitionCount - <==      Total: 1
+2020-07-01 16:25:00.809 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.loginUser] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:25:00.810 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:25:00.811 [main] DEBUG com.steins.dao.UserDaoInterface.loginUser - ==>  Preparing: SELECT * from users where username = ? and password = ? 
+2020-07-01 16:25:00.812 [main] DEBUG com.steins.dao.UserDaoInterface.loginUser - ==> Parameters: lp(String), 123456(String)
+2020-07-01 16:25:00.874 [main] DEBUG com.steins.dao.UserDaoInterface.loginUser - <==      Total: 1
+2020-07-01 16:25:00.885 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.updateUser] use [master] Strategy, SqlCommanType [UPDATE]..
+2020-07-01 16:25:00.886 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：master
+2020-07-01 16:25:00.944 [main] DEBUG com.steins.dao.UserDaoInterface.updateUser - ==>  Preparing: update users SET username = ?, password = ?, rating = ?, sex = ? where id_number = ? 
+2020-07-01 16:25:00.947 [main] DEBUG com.steins.dao.UserDaoInterface.updateUser - ==> Parameters: 20200701(String), 123(String), 1(Integer), 0(Integer), 20200701(String)
+2020-07-01 16:25:01.047 [main] DEBUG com.steins.dao.UserDaoInterface.updateUser - <==    Updates: 6
+2020-07-01 16:25:01.054 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getExamCount] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:25:01.055 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:25:01.056 [main] DEBUG com.steins.dao.UserDaoInterface.getExamCount - ==>  Preparing: select count(*) from info_exam where student_id = ? 
+2020-07-01 16:25:01.059 [main] DEBUG com.steins.dao.UserDaoInterface.getExamCount - ==> Parameters: 2017013053(String)
+2020-07-01 16:25:01.107 [main] DEBUG com.steins.dao.UserDaoInterface.getExamCount - <==      Total: 1
+2020-07-01 16:25:01.112 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getStudentInternship] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:25:01.112 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:25:01.114 [main] DEBUG c.steins.dao.UserDaoInterface.getStudentInternship - ==>  Preparing: select * from info_internship where student_id = ? limit ?,? 
+2020-07-01 16:25:01.118 [main] DEBUG c.steins.dao.UserDaoInterface.getStudentInternship - ==> Parameters: 2017013053(String), 1(Integer), 5(Integer)
+2020-07-01 16:25:01.176 [main] DEBUG c.steins.dao.UserDaoInterface.getStudentInternship - <==      Total: 5
+2020-07-01 16:25:01.181 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getInfoHeaderByIdNumber] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:25:01.182 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:25:01.183 [main] DEBUG c.s.dao.UserDaoInterface.getInfoHeaderByIdNumber - ==>  Preparing: select * from info_header where id_number = ? 
+2020-07-01 16:25:01.185 [main] DEBUG c.s.dao.UserDaoInterface.getInfoHeaderByIdNumber - ==> Parameters: 2017013053(String)
+2020-07-01 16:25:01.233 [main] DEBUG c.s.dao.UserDaoInterface.getInfoHeaderByIdNumber - <==      Total: 1
+2020-07-01 16:25:01.242 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getStudentCompetition] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:25:01.242 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:25:01.374 [main] DEBUG c.s.dao.UserDaoInterface.getStudentCompetition - ==>  Preparing: select * from info_competition where student_id = ? limit ?,? 
+2020-07-01 16:25:01.376 [main] DEBUG c.s.dao.UserDaoInterface.getStudentCompetition - ==> Parameters: 2017013053(String), 1(Integer), 5(Integer)
+2020-07-01 16:25:01.425 [main] DEBUG c.s.dao.UserDaoInterface.getStudentCompetition - <==      Total: 0
+2020-07-01 16:25:01.434 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getStudentExam] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:25:01.436 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:25:01.437 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentExam - ==>  Preparing: select * from info_exam where student_id = ? limit ?,? 
+2020-07-01 16:25:01.438 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentExam - ==> Parameters: 2017013053(String), 1(Integer), 5(Integer)
+2020-07-01 16:25:01.488 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentExam - <==      Total: 5
+2020-07-01 16:25:01.498 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getStudentInfo] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:25:01.499 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:25:01.499 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentInfo - ==>  Preparing: SELECT * from users where id_number = ? 
+2020-07-01 16:25:01.500 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentInfo - ==> Parameters: 20200702(String)
+2020-07-01 16:25:01.554 [main] DEBUG com.steins.dao.UserDaoInterface.getStudentInfo - <==      Total: 0
+2020-07-01 16:25:01.563 [main] DEBUG com.steins.dao.split.DynamicDataSourceInterceptor - 设置方法[com.steins.dao.UserDaoInterface.getInternshipCount] use [slave] Strategy, SqlCommanType [SELECT]..
+2020-07-01 16:25:01.563 [main] DEBUG com.steins.dao.split.DynamicDataSourceHolder - 所使用的数据源为：slave
+2020-07-01 16:25:01.563 [main] DEBUG com.steins.dao.UserDaoInterface.getInternshipCount - ==>  Preparing: select count(*) from info_internship where student_id = ? 
+2020-07-01 16:25:01.564 [main] DEBUG com.steins.dao.UserDaoInterface.getInternshipCount - ==> Parameters: 2017013053(String)
+2020-07-01 16:25:01.609 [main] DEBUG com.steins.dao.UserDaoInterface.getInternshipCount - <==      Total: 1

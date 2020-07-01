@@ -31,9 +31,9 @@ public class InstitutionServiceImp implements InstitutionService {
         return this.institutionDao.regist(user);
     }
 
-    public String checkRegist(String idNumber) {
-        return this.institutionDao.checkRegist(idNumber);
-    }
+//    public String checkRegist(String idNumber) {
+//        return this.institutionDao.checkRegist(idNumber);
+//    }
 
     @Anno(
             operationName = "增加考试信息",

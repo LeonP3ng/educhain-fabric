@@ -50,7 +50,6 @@ public class InstitutionController {
             user.setRating(rating);
             user.setIdNumber(idNumber);
             boolean var8 = false;
-
             int flag;
             try {
                 flag = this.institutionServiceImp.regist(user);
