@@ -129,9 +129,9 @@ function internship0(){
                  +'</td>'
                  +'</tr>';
         
-        var elements3 = $("#myTable3").children().length;    //表示id为“mtTable”的标签下的子标签的个数
+        var elements3 = $("#myTable3").children().length;      //表示id为“mtTable“的标签下的子标签的个数
         
-        $("#myTable3").children().eq(elements3 - 1).after(tableHtml3); //在表头之后添加空白行
+        $("#myTable3").children().eq(elements3 - 1).after(tableHtml3);     //在表头之后添加空白行
         num++;     
     }
 
@@ -155,7 +155,7 @@ function internship0(){
         $("#myTable4").children().eq(elements4 - 1).after(tableHtml4); //在表头之后添加空白行
         num++;     
     }
-    //删除行
+          //删除行
 function removeTr(trNum){
     $("#tr"+trNum).remove();
 }
@@ -163,9 +163,9 @@ $("#sbtInternship0").click(function(){
     var rows = $("#myTable0").find('tr').length,
         examData = [];
 
-    var flag = true;//是否全部输入  默认true
+    var flag = true;    //是否全部输入  默认true
     $("#myTable0 input").each(function (){
-        if($(this).val()==""){//有空输入，将flag置为false
+        if($(this).val()==""){      //有空输入，将flag置为false
             flag = false;//
         }
     });
