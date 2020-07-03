@@ -163,9 +163,9 @@ $("#sbtInternship0").click(function(){
     var rows = $("#myTable0").find('tr').length,
         examData = [];
 
-    var flag = true;//是否全部输入  默认true
+    var flag = true;   //是否全部输入  默认true
     $("#myTable0 input").each(function (){
-        if($(this).val()==""){//有空输入，将flag置为false
+        if($(this).val()==""){   //有空输入，将flag置为false
             flag = false;//
         }
     });
@@ -218,11 +218,11 @@ $("#sbtInternship1").click(function(){
     var rows = $("#myTable3").find('tr').length,
         internshipData = [],
         itData = [];
-    var flag = true;//是否全部输入  默认true
+    var flag = true;    //是否全部输入  默认true
  
  $("#myTable3 input").each(function (){
  
-  if($(this).val()==""){//有空输入，将flag置为false
+  if($(this).val()==""){   //有空输入，将flag置为false
  
    flag = false;
  
@@ -319,7 +319,7 @@ $("#sbtInternship2").click(function(){
     var flag = true;
     $("#myTable4 input").each(function (){
  
-  if($(this).val()==""){//有空输入，将flag置为false
+  if($(this).val()==""){   //有空输入，将flag置为false
  
    flag = false;
  
@@ -396,7 +396,7 @@ function information(){
                         $('#status').html(str);
                     }
                     else{
-                        alert("查询失败");
+                        alert("查询失败!");
                     }
                     // console.log(data.infoHeader.dataProtect);
                     // console.log(data.infoHeader.idNumber);
@@ -484,12 +484,12 @@ function practice(n){
 
                                 }
                                 else{
-                                    alert("查询失败")
+                                    alert("查询失败!")
                                 }
                                 
                             },
                         error: function () {
-                            alert("未连接");
+                            alert("未连接!");
                         }
                         });
                         },
