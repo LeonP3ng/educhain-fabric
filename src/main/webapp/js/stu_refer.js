@@ -339,7 +339,7 @@
 	                	
 	            },
             	  	error: function () {
-              			alert("未连接！");
+              			alert("未连接");
         }
 	});
 
@@ -353,7 +353,7 @@
 
 		function updatePage1(n){
 			        var pageNum=$(".pageShow li");
-			        //上一页
+			         //上一页
 			        pageNum[0].onclick=function(){
 			            if(n>1){
 			                score(parseInt(n)-parseInt(1));
@@ -367,7 +367,7 @@
 			                } 
 			            }(i)
 			        }
-			        // 下一页
+			         // 下一页
 			        pageNum[pageNum.length-1].onclick=function(){
 			            if(n<page){
 			                score(parseInt(n)+parseInt(1));
@@ -391,7 +391,7 @@
 			                } 
 			            }(i)
 			        }
-			        // 下一页
+			        //  下一页
 			        pageNum[pageNum.length-1].onclick=function(){
 			            if(n<page){
 			                competition(parseInt(n)+parseInt(1));
@@ -401,7 +401,7 @@
 				
 			    function updatePage3(n){
 			        var pageNum=$(".pageShow li");
-			        //上一页
+			        // 上一页
 			        pageNum[0].onclick=function(){
 			            if(n>1){
 			                practice(parseInt(n)-parseInt(1));
@@ -415,7 +415,7 @@
 			                } 
 			            }(i)
 			        }
-			        // 下一页
+			        //  下一页
 			        pageNum[pageNum.length-1].onclick=function(){
 			            if(n<page){
 			                practice(parseInt(n)+parseInt(1));
