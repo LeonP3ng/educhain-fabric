@@ -58,7 +58,7 @@
                         $('#status').html(str);
 					}
 					else{
-						alert("查询失败");
+						alert("查询失败！");
 					}
 					// console.log(data.infoHeader.dataProtect);
 					// console.log(data.infoHeader.idNumber);
@@ -146,12 +146,12 @@
 	                }
 	                	}
 	                	else{
-	                		alert("查询失败");
+	                		alert("查询失败！");
 	                	}
 	                	
 	            },
             	  	error: function () {
-              			alert("未连接");
+              			alert("未连接！");
         }
 	});
 
@@ -241,12 +241,12 @@
 	                }
 	                	}
 	                	else{
-	                		alert("查询失败");
+	                		alert("查询失败！");
 	                	}
 	                	
 	            },
             	  	error: function () {
-              			alert("未连接");
+              			alert("未连接！");
         }
 	});
 
@@ -334,12 +334,12 @@
 
 	                	}
 	                	else{
-	                		alert("查询失败")
+	                		alert("查询失败！")
 	                	}
 	                	
 	            },
             	  	error: function () {
-              			alert("未连接");
+              			alert("未连接！");
         }
 	});
 
